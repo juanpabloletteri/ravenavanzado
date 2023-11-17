@@ -1,0 +1,7 @@
+{
+  "name": "ravenavanzado",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
