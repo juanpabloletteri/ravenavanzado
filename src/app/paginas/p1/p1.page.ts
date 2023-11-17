@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class P1Page implements OnInit {
 
+  contador: number = 1;
+  puntaje: number = 0;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  elegirOpcion(opcion: number) {
+    this.contador += 1;
   }
 
 }

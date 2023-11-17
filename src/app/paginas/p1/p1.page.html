@@ -4,10 +4,46 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">p1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<img src="/assets/imagenes/{{contador}}.jpg" alt="" />
+
+
+
+<ion-content>
+  <ion-grid class="fondo">
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="boton" (click)="elegirOpcion(1)">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="boton" (click)="elegirOpcion(2)">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="boton" (click)="elegirOpcion(3)">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="boton" (click)="elegirOpcion(4)">4</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row></ion-row>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button class="boton" (click)="elegirOpcion(5)">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="boton" (click)="elegirOpcion(6)">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="boton" (click)="elegirOpcion(7)">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button class="boton" (click)="elegirOpcion(8)">8</ion-button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 </ion-content>
