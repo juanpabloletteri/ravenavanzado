@@ -9,7 +9,7 @@ import { map } from 'rxjs';
 })
 export class P1Page implements OnInit {
 
-  contador: number = 1;
+  contador: number = 0;
   puntaje: number = 0;
   respuestas: any[] = [];
 
@@ -33,7 +33,24 @@ export class P1Page implements OnInit {
   }
 
   elegirOpcion(opcion: number) {
+
+    if (opcion == this.respuestas[this.contador].correcta) {
+      console.log("sumo 1 correcta");
+      console.log("opcion-> ", opcion);
+      console.log("correcta-> ", this.respuestas[this.contador].correcta);
+
+      this.puntaje += 1;
+    }
+    else {
+      console.log("INCORRECTA");
+      console.log("opcion-> ", opcion);
+      console.log("correcta-> ", this.respuestas[this.contador].correcta);
+
+    }
+    console.log("puntaje: ", this.puntaje);
+    console.log("---------------");
     this.contador += 1;
+
   }
 
 }
