@@ -33,6 +33,14 @@ export class HomePage {
         buttons: ['Ok']
       });
       await alert.present();
+    }
+    else if (this.edad > 99 || this.edad < 15) {
+      const alert = await this.alert.create({
+        header: "Aviso",
+        message: "Debe ingresar un rango valido de edad 15 a 99",
+        buttons: ['Ok']
+      });
+      await alert.present();
     } else {
       alert("seguir");
       this.gestion.setDatos(this.nombre, this.edad, this.sexo);

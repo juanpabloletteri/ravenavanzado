@@ -1,9 +1,33 @@
 <ion-item>
-  <ion-label position="floating">Etiqueta flotante</ion-label>
-  <ion-input></ion-input>
+  <ion-label>Test Raven Avanzado</ion-label>
+
 </ion-item>
 
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Resultados</ion-card-title>
+    <ion-card-subtitle> {{persona.nombre}} muchas gracias por haber realizado nuestro test</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Here's a small text description for the card content. Nothing more, nothing less.
+
+    <ion-grid class="tabla" [fixed]="true">
+      <ion-row>
+        <ion-col>Edad</ion-col>
+        <ion-col>Puntaje</ion-col>
+        <ion-col>Percentil</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> {{persona.edad}} </ion-col>
+        <ion-col> {{persona.puntaje}} </ion-col>
+        <ion-col> {{percentil}} </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-card-content>
+</ion-card>
 
 <ion-item>
-  <ion-button  [routerLink]="['/home']" expand="block">Volver</ion-button>
+  <ion-button [routerLink]="['/home']" expand="block">Volver</ion-button>
 </ion-item>
