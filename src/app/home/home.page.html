@@ -16,7 +16,21 @@
   <div id="container">
     <strong>Ready to create an app?</strong>
 
-    <ion-button [routerLink]="['/p1']" expand="block">COMENZAR
+    <ion-list>
+
+      <ion-item>
+        <ion-label color="primary" position="floating">Nombre </ion-label>
+        <ion-input placeholder="Nombre" [(ngModel)]="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" position="floating">Edad </ion-label>
+        <ion-input type="number" placeholder="Edad" [(ngModel)]="edad"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button (click)="seguir()" expand="block">COMENZAR
       <ion-icon name="arrow-redo"></ion-icon>
     </ion-button>
 

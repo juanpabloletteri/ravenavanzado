@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { map } from 'rxjs';
+import { Persona } from 'src/app/clases/persona';
+import { GestionService } from 'src/app/servicios/gestion.service';
 
 @Component({
   selector: 'app-p1',
@@ -12,13 +14,16 @@ export class P1Page implements OnInit {
   contador: number = 0;
   puntaje: number = 0;
   respuestas: any[] = [];
+  persona = new Persona();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private gestion: GestionService) { }
 
   ngOnInit() {
     this.getRespuestas().subscribe(res => {
       this.respuestas = res;
-      console.log("respuetas", this.respuestas);
+      this.persona = this.gestion.getPersona();
+      console.log("gestion", this.persona);
+      //console.log("getpersona", this.gestion.getPersona());
     });
   }
 
@@ -51,6 +56,10 @@ export class P1Page implements OnInit {
     console.log("---------------");
     this.contador += 1;
 
+  }
+
+  probar(): void {
+    this.gestion.setPuntaje(this.puntaje);
   }
 
 }

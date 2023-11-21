@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Persona } from 'src/app/clases/persona';
+import { GestionService } from 'src/app/servicios/gestion.service';
 
 @Component({
   selector: 'app-p2',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class P2Page implements OnInit {
 
-  constructor() { }
+  persona = new Persona();
+
+  constructor(private gestion: GestionService) { }
 
   ngOnInit() {
+    this.persona = this.gestion.getPersona();
+    console.log("personaaaaa + puntaje", this.persona);
   }
+
+
 
 }
