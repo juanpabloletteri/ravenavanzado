@@ -28,6 +28,18 @@
         <ion-input type="number" placeholder="Edad" [(ngModel)]="edad"></ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-label color="primary" position="floating">Sexo con el que te identificas</ion-label>
+        <ion-select color="primary" [(ngModel)]="sexo">
+
+          <ion-select-option value="F">Femenino</ion-select-option>
+          <ion-select-option value="M">Masculino</ion-select-option>
+          <ion-select-option value="o">Otro</ion-select-option>
+        </ion-select>
+
+
+      </ion-item>
+
     </ion-list>
 
     <ion-button (click)="seguir()" expand="block">COMENZAR

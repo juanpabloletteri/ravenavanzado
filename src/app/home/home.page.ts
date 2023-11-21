@@ -24,18 +24,18 @@ export class HomePage {
   }
 
   async seguir() {
-    if (this.edad == null || this.nombre == "") {
+    if (this.edad == null || this.nombre == "" || this.sexo == null) {
       console.log("dalta edad");
 
       const alert = await this.alert.create({
         header: "Aviso",
-        message: "Debe ingresar su nombre y edad para continuar",
+        message: "Debe ingresar su nombre, edad y sexo para continuar",
         buttons: ['Ok']
       });
       await alert.present();
     } else {
       alert("seguir");
-      this.gestion.setDatos(this.nombre, this.edad, "M");
+      this.gestion.setDatos(this.nombre, this.edad, this.sexo);
       this.router.navigate(['p1']);
     }
     console.log("nombre: ", this.nombre, "-- edad: ", this.edad);
