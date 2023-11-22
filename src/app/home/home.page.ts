@@ -42,7 +42,6 @@ export class HomePage {
       });
       await alert.present();
     } else {
-      alert("seguir");
       this.gestion.setDatos(this.nombre, this.edad, this.sexo);
       this.router.navigate(['p1']);
     }
