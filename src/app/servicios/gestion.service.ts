@@ -33,7 +33,12 @@ export class GestionService {
     this.persona.edad = edad;
     this.persona.sexo = sexo;
   }
+
   getPersona() {
     return this.persona;
+  }
+
+  borrarDatos(): void {
+    this.persona = new Persona();
   }
 }

@@ -10,8 +10,7 @@
   </ion-card-header>
 
   <ion-card-content>
-    Here's a small text description for the card content. Nothing more, nothing less.
-
+    {{textoPercentil}}
     <ion-grid class="tabla" [fixed]="true">
       <ion-row>
         <ion-col>Edad</ion-col>
@@ -29,5 +28,5 @@
 </ion-card>
 
 <ion-item>
-  <ion-button [routerLink]="['/home']" expand="block">Volver</ion-button>
+  <ion-button (click)="reiniciar()" [routerLink]="['/home']" expand="block">Volver</ion-button>
 </ion-item>
